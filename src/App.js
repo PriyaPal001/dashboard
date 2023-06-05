@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Layout from "./components/Layout";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MasterTab from "./components/Mastertab";
+import collectFee from "./components/CollectFee";
+import GenerateReceipt from "./components/Generatereceipt";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import MainContent from "./components/Maincontent";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Layout /> */}
+      <Router>
+        <div className="container">
+          <Navbar />
+          <div className="content">
+            <Sidebar />
+            <Switch>
+              <Route exact path="/" component={MainContent} />
+              <Route exact path="/collectfee" component={collectFee} />
+              <Route
+                exact
+                path="/generatereceipts"
+                component={GenerateReceipt}
+              />
+              <Route exact path="/master" component={MasterTab} />
+              <Route exact path="/logout" component={''} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
