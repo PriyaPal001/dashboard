@@ -5,19 +5,21 @@ import MapFeeHeadsForm from './MapFeeHeadsForm';
 import AddBranchForm from './AddBranchForm';
 import AddAcademicYearForm from './AddAcademicYearForm';
 import AddCategoryForm from './AddCategoryForm';
+import AddFeeHeadsPage from './AddFeeHeadsPage';
+import AddBranchPage from './AddBranchPage';
+import AddAcademicPage from './AddAcademicPage';
 import "./Mastertab.css"
 
 const MasterTab = () => {
   return (
     <div className='MasterTab'>
-      {/* <h2>Master</h2> */}
       <div>
-        {/* <h3>Adding Students</h3> */}
+        <h3>Adding Students</h3>
         <AddStudentForm />
       </div>
-      {/* <div>
+      <div>
         <h3>Adding Fee Heads</h3>
-        <AddFeeHeadForm />
+        <AddFeeHeadsPage />
       </div>
       <div>
         <h3>Mapping Fee Heads to Categories</h3>
@@ -25,16 +27,16 @@ const MasterTab = () => {
       </div>
       <div>
         <h3>Adding New Branch</h3>
-        <AddBranchForm />
+        <AddBranchPage />
       </div>
       <div>
         <h3>Adding New Academic Year</h3>
-        <AddAcademicYearForm />
+        <AddAcademicPage />
       </div>
       <div>
         <h3>Adding Categories</h3>
         <AddCategoryForm />
-      </div> */}
+      </div>
     </div>
   );
 };
